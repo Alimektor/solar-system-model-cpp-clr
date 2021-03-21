@@ -93,6 +93,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -124,6 +126,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Coordinate.cpp" />
+    <ClCompile Include="SolarSystemForm.cpp" />
+    <ClCompile Include="TBody.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Coordinate.h" />
+    <ClInclude Include="SolarSystemForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TBody.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SolarSystemForm.resx">
+      <DependentUpon>SolarSystemForm.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
