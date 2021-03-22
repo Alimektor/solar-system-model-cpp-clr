@@ -16,8 +16,8 @@ protected:
 	int m_size;
 	Color m_color;
 	double m_angle;
-	int m_size_ñoefficient = 1;
-	int m_radius_ñoefficient = 1;
+	int m_size_coefficient = 1;
+	int m_radius_coefficient = 1;
 public:
 	TBody::TBody(Coordinate ^ coordinate, TBody ^center, Color color);
 	TBody(Coordinate^ coordinate, int size, Color color);
@@ -27,7 +27,7 @@ public:
 	int get_size();
 	void draw(Graphics^ graphics);
 	void rotate();
-	void change_size(int ñoefficient);
-	void change_radius(int ñoefficient);
+	void change_size(int coefficient);
+	void change_radius(int coefficient);
 };
 

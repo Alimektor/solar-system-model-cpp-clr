@@ -121,14 +121,14 @@ inline System::Void SolarSystem::SolarSystemForm::TimerSS_Tick(System::Object ^ 
 
 inline System::Void SolarSystem::SolarSystemForm::sizeTrackBar_Scroll(System::Object ^ sender, System::EventArgs ^ e)
 {
-	int ñoefficient = this->sizeTrackBar->Value;
-	sun->change_size(ñoefficient);
+	int coefficient = this->sizeTrackBar->Value;
+	sun->change_size(coefficient);
 	this->PictureBox->Invalidate();
 }
 
 inline System::Void SolarSystem::SolarSystemForm::radiusTrackBar_Scroll(System::Object ^ sender, System::EventArgs ^ e)
 {
-	int ñoefficient = this->radiusTrackBar->Value;
-	sun->change_radius(ñoefficient);
+	int coefficient = this->radiusTrackBar->Value;
+	sun->change_radius(coefficient);
 	this->PictureBox->Invalidate();
 }
